@@ -33,6 +33,42 @@
 # print(d.count(2))
 
 #元组一旦输入之后不可修改，但是数组可以修改
-b = [3,4,5,6,"xixi","haha",True,False,6,7,9,"庆毅辉"]  #数组用方括号
-b.append("大可爱")   #往数组尾巴追加内容
-print(b.append)
+# b = [3,4,5,6,"xixi","haha",True,False,6,7,9,"庆毅辉"]  #数组用方括号
+# b.append("大可爱")   #往数组尾巴追加一个元素
+# print(b)
+# b.insert(3,"你好呀")   #在数组下标为3的元素后面插入“你好呀”
+# print(b)
+# s=b.pop(0)  #剪切下标为0的元素
+# z=b.pop(0)   #在上一步的基础上再剪切一次
+# print(s+z)
+# b.extend([2,3,9,"比心"])    #往数组尾巴上再扩充数组
+# print(b)
+# b.remove(5)    #在数组中删除元素为5的项
+# print(b)
+
+# """
+# python的语法：
+# 所有的函数都是小括号结尾
+# 元组、数组、字典的取值，都是用[]
+# 元组、数组、字典的定义：()[]{}
+# """
+
+# xx=[1,True,0,False]
+# print(xx.count(0))     #False在程序运行时是当做0处理的
+
+
+
+"""字典的特点
+字典中值没有顺序
+字典的接口必须是键值对的结构  键：值   key:value
+"""
+a={"name":"zhangsan","gender":"nan","age":25}   #name、gender、age是key,相当于变量，后面跟的内容是value
+print(a["name"])   #取值，[]里面跟的是key
+a["weight"]="108斤"   #新增，在字典中新增内容
+print(a)
+a["name"]="xiaoming"   #修改name
+x=a.get("name")   #获取
+print(a)
+a.update(name="lisi")   #另一种实现新增或修改的方法update
+del a["weight"]   #数组和字典的删除，[]里分别是主键和下标
+
