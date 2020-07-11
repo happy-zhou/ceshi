@@ -32,7 +32,7 @@
 # print(d[0][11])    #a在d中的下标是0，庆毅辉在a中的下标是11
 # print(d.count(2))
 
-#元组一旦输入之后不可修改，但是数组可以修改
+#元组一旦输入之后不可修改，但是数组/元组可以修改
 # b = [3,4,5,6,"xixi","haha",True,False,6,7,9,"庆毅辉"]  #数组用方括号
 # b.append("大可爱")   #往数组尾巴追加一个元素
 # print(b)
@@ -58,17 +58,26 @@
 
 
 
-"""字典的特点
-字典中值没有顺序
-字典的接口必须是键值对的结构  键：值   key:value
-"""
-a={"name":"zhangsan","gender":"nan","age":25}   #name、gender、age是key,相当于变量，后面跟的内容是value
-print(a["name"])   #取值，[]里面跟的是key
-a["weight"]="108斤"   #新增，在字典中新增内容
+# """字典的特点
+# 字典中值没有顺序
+# 字典的接口必须是键值对的结构  键：值   key:value
+# """
+# a={"name":"zhangsan","gender":"nan","age":25}   #name、gender、age是key,相当于变量，后面跟的内容是value
+# print(a["name"])   #取值，[]里面跟的是key
+# a["weight"]="108斤"   #新增，在字典中新增内容
+# print(a)
+# a["name"]="xiaoming"   #修改name
+# x=a.get("name")   #获取
+# print(a)
+# a.update(name="lisi")   #另一种实现新增或修改的方法update,可以同时更新多个
+# del a["weight"]   #数组和字典的删除，[]里分别是主键和下标
+
+###例子：获取用户输入的个人信息，并且存储到字典中
+name=input("please input your name:")     #此时name是变量，不是字符串
+age=input("please input your age:")
+sex=input("please input your sex:")
+a={"name":name,"age":age,"sex":sex}  
 print(a)
-a["name"]="xiaoming"   #修改name
-x=a.get("name")   #获取
-print(a)
-a.update(name="lisi")   #另一种实现新增或修改的方法update
-del a["weight"]   #数组和字典的删除，[]里分别是主键和下标
+
+
 
