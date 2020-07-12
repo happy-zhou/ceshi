@@ -77,7 +77,7 @@ name=input("please input your name:")     #此时name是变量，不是字符串
 age=input("please input your age:")
 sex=input("please input your sex:")
 a={"name":name,"age":age,"sex":sex}  
-print(a)
+print(a)   
 
 
 
