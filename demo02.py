@@ -73,9 +73,20 @@
 
 #for循环
 #实现遍历
-studentlist=["dd","ds","gfg","efe","bgh","jk","kf"]
-for i in studentlist:    #i表示遍历对象里的每一个值
+# studentlist=["dd","ds","gfg","efe","bgh","jk","kf"]
+# for i in studentlist:    #i表示遍历对象里的每一个值
+#     print(i)
+
+# b=list(range(0,100))   #range表示生成一个0-100的数列，左闭右开原则，list将这个数列转换成数组，此时默认步长/步进为1
+# q=range(0,20,-2)   #此时表示步长为2,b步长还可以为负数
+# w=list(range(10))    #此种形式默认下标从0开始，长度为10
+for i in range(10,0,-2):
+    if i ==4:
+        continue    #continue跳出当前循环值，但后面的循环继续执行
     print(i)
 
-b=list(range(0,100))   #range表示生成一个数列，list将这个数列转换成数组，此时默认步长/步进为1
-q=list(range(1,100,2))   #此时表示步长为2,b步长还可以为负数
+for i in range(10,0,-2):
+    if i ==4:
+        break    #break跳出当前循环，并结束后面循环
+    print(i)
+
