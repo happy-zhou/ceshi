@@ -70,7 +70,7 @@
 # x=a.get("name")   #获取
 # print(a)
 # a.update(name="lisi")   #另一种实现新增或修改的方法update,可以同时更新多个
-# del a["weight"]   #数组和字典的删除，[]里分别是主键和下标
+ del a["weight"]   #数组和字典的删除，[]里分别是主键和下标
 
 ###例子：获取用户输入的个人信息，并且存储到字典中
 name=input("please input your name:")     #此时name是变量，不是字符串
