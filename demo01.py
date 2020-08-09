@@ -12,6 +12,8 @@
 # a='sdfsdfgkvndfjsdmkvlfmvkdflvmskd'
 # print(len(a))
 
+#git和GitHub的关联在Python视频的第十五分钟左右
+
 # a=input("请输入字符串1:")     #读入两个字符串，并计算字符串长度之和
 # b=input("请输入字符串2：")
 # print(len(a)+len(b))
