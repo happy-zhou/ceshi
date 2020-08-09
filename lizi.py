@@ -1,5 +1,5 @@
 ###例子：获取用户输入的个人信息，并且存储到字典中
-# name=input("please input your name:")     #此时name是变量，不是字符串
+# name=input("please input your name:")     #此时name是字符串变量
 # age=input("please input your age:")
 # sex=input("please input your sex:")
 # a={"name":name,"age":age,"sex":sex}  
@@ -14,7 +14,7 @@
 #while循环
 # highscore={}
 # lowscore={}
-# studentlist=["dd","ds","gfg","efe","bgh","jk","kf"]
+# studentlist=["dd","ds","gfg","efe","bgh","jk","kf"]    #数组
 # a=0
 # while a<len(studentlist):
 #     chengji=input("请输入"+studentlist[a]+"的成绩：")
