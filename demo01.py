@@ -1,10 +1,12 @@
 # print("你好，庆毅辉")   #只有字符串类型的需要加双引号或者单引号
-# print(3+4)
+# print(3+4)            #整数类型
 # print("哈哈哈"*20)   #输出20个哈哈哈
-# print(2>100)
+# print(2>100)        #输出布尔值true或者false
 
+#任何数据类型都可以转换成字符串str（除了空），int和float类型可以相互转换
 # a = float(input("请输入a值："))   #数据类型的转换，如果不加float转换，a、b是字符串类型，输出结果会将两个值连接起来而不是相加
 # b = float(input("请输入b值："))
+# print(type(a))    #type表示输出数据类型
 # print("输出:",a+b)
 
 # a='sdfsdfgkvndfjsdmkvlfmvkdflvmskd'
