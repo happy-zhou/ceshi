@@ -38,10 +38,12 @@ username  方法里的参数/变量
 #     print("a"+1)     #字符串型和整数型无法运算
 # except:
 #     print("上面的代码写错了")     #try和except是成对出现的，先运行try,try为true则不会执行except
+# finally:          #无论有没有错误都会执行的部分
+#      pass
 # #异常类d 
 # try:
 #     print(jkdb+1)
-# except Exception as e:                #Exception是异常类，包含了异常的原因
+# except Exception as err:                #Exception是异常类，err包含了异常的原因
 #     pass:
 #     print("上面的代码写错了") 
 
@@ -116,6 +118,7 @@ with open("D:\workhome\github\ceshi\日记.txt","r") as f:
 
 
 
+#对象----具体的事物，世间万物皆对象
 
 
 
