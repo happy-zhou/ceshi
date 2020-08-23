@@ -1,5 +1,6 @@
 from selenium import webdriver   #相当于使用selenium库里面的一个模块
 
+#例子：在51job网站中，找到位于杭州与Python相关的工作（不完整）
 
 driver=webdriver.chrome(r'F:\chrom\chromedriver_win32\chromedriver.exe')      
 #告知浏览器驱动的地址,dirver是webdriver的实例对象，这个对象类似于一个遥控器
@@ -13,5 +14,11 @@ ele.send_keys('python')    #发送搜索的关键字Python
 ele=driver.find_element_by_id('work_position_input')    
 #告诉浏览器寻找ID为work_position_input的元素，即工作地点,再赋值给具体的对象ele
 ele.click('') 
+
+eles=driver.find_element_by_css_selector('#work_position_click_center_right_list_000000 em[class=on]')
+for ele in eles:
+    ele.click()
+driver.find_element_by_id('work_position_click_center_right_list_category_000000_080200').click()
+
 
 
