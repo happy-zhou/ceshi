@@ -110,16 +110,25 @@ s='ahmd chd even93 DaVFYmj'
 
 
 #作业3：循环提示用户输入：用户名、密码、邮箱（要求用户输入的长度不超过20个字符，如果超过则只有前20个有效），如果用户输入q或者Q则表示停止输入
-s=''
-while True:
-    name=input('请输入用户名：')
-    if len(name)>20:
-        name=name[0:20]
-    password=input('请输入密码：')
-    mail=input('请输入邮箱：')
-    dit='{}\t{}\t{}\n'.format(name,password,mail)       #\t表示空格，\n表示换行,format是格式化的一种形式
-    s=s+dit
-    if name=='q' or name=='Q':
-        break
-print(s)
+# s=''
+# while True:
+#     name=input('请输入用户名：')
+#     if len(name)>20:
+#         name=name[0:20]
+#     password=input('请输入密码：')
+#     mail=input('请输入邮箱：')
+#     dit='{}\t{}\t{}\n'.format(name,password,mail)       #\t表示空格，\n表示换行,format是格式化的一种形式
+#     s=s+dit
+#     if name=='q' or name=='Q':
+#         break
+# print(s)
+
+str1=input('请输入字符串：')
+if str1==' ':
+        print('true')
+for i in range(len(str1)):
+    if str1[i]=='(' or str1[i]==')' or str1[i]=='*':
+        if str1.find('(')>str1.find(')'):
+            print('true')
+            
     
