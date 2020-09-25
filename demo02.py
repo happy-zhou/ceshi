@@ -78,7 +78,7 @@
 #     print(i)
 
 # b=list(range(0,100))   #range表示生成一个0-100的数列，左闭右开原则，list将这个数列转换成数组，此时默认步长/步进为1
-# q=range(0,20,-2)   #此时表示步长为2,b步长还可以为负数
+# q=range(20,0,-2)   #此时表示步长为2,b步长还可以为负数
 # w=list(range(10))    #此种形式默认下标从0开始，长度为10
 for i in range(10,0,-2):
     if i ==4:
@@ -89,4 +89,8 @@ for i in range(10,0,-2):
     if i ==4:
         break    #break跳出当前循环，并结束后面循环
     print(i)
+
+str1='12345678'
+str1=str1[::-1]
+print(int(str1))
 
