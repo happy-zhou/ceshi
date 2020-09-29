@@ -196,7 +196,7 @@ print(toStr(415,16))
 #     for passum in range(len(alist)-1,0,-1):
 #         for i in range(passum):
 #             if alist[i]>alist[i+1]:    #要保证i+1小于或等于最大的下标
-#                 alist[i],alist[i+1]=alist[i+1],alist[i]
+#                alist[i],alist[i+1]=alist[i+1],alist[i]   
 #     return  alist
 # print(bubbleSort([1,4,7,2,9,11,6]))
 #选择排序：第一趟对比将最大的数和最后一个数交换，第二趟对比将第二大的数和倒数第二个数交换
@@ -278,9 +278,6 @@ def buildParseTree(fpexp):   #参数是字符串表达的全括号表达式
     return  eTree
     print(buildParseTree([['*'],['+','5','3'],['/','10','2']]))
             
-
-
-print([0]*64)
 
         
 
