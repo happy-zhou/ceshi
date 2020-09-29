@@ -99,7 +99,7 @@ class  Girlfriend():
 
 
 #类的继承
-# class Nvpengyou(Girlfriend):    #Nvpengyou子类继承了Girlfriend父类的所有方法和属性
+# class Nvpengyou(Girlfriend):    #Nvpengyou子类继承了Girlfriend父类的所有方法和属性，具体的事物，世间万物皆对象
 #     def xingge(self):
 #         print("乐观外向，善解人意")    #在子类中也可以定义新的方法
 # liuyifei=Nvpengyou("女","165cm","55kg","黑长直","24")
@@ -116,9 +116,6 @@ with open("日记.txt","a",encoding="utf8")  as f:    #w表示写入，原来的
 with open("D:\workhome\github\ceshi\日记.txt","r") as f:
     f.read(text)    #读文件
 
-
-
-#对象----具体的事物，世间万物皆对象
 
 
 
