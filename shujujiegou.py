@@ -216,11 +216,11 @@ print(toStr(415,16))
 #         position=index
 #         while position>0 and alist[position-1]>currentvalue:   #当前需要插入的项小于其前一项
 #             alist[position]=alist[position-1]   #将前一项放到当前空的位置
-#             position=position-1
+            # position=position-1   
 #         alist[position]=currentvalue  #插入新项
 #     return alist
 # print(selectionSort([1,7,4,2,9,11,6]))
-#谢尔排序：以插入排序作为基础，对无序表进行间隔划分子列表，，一般初始间隔为n/2,每个子列表都执行插入排序,后面间隔再缩小到n/4,n/8
+#谢尔排序：以插入排序作为基础，对无序表进行间隔划分子列表，，一般初始间隔为n/2,每个子列表都执行插入排序,后面间隔再缩小到n/4,n/8...最终就是插入排序
 # def shellsort(alist):
 #     sublistcount=len(alist)//2   #间隔设定
 #     while sublistcount>0:
@@ -237,14 +237,48 @@ print(toStr(415,16))
 #             position=position-gap
 #         alist[position]=currentvalue  
 # print(shellsort([1,7,4,2,9,11,6]))
-#归并排序MergeSort:先由大到小分开，再由小到大排序合并
-def MergeSort(alist):
-    if len(alist)>1:
-        mid=len(alist)//2
-        lefthalf=alist[:mid]    #切片有左闭右开原则
-        righthalf=alist[mid:]   #将列表分成左右两部分
-        MergeSort(lefthalf)
-        MergeSort(righthalf)   #递归调用
+#归并排序MergeSort:先由大到小分开（八个元素分成四四一组，四四分成二二，二二分成一一），再由小到大排序（比大小）合并
+# def MergeSort(alist):
+#     if len(alist)>1:
+#         mid=len(alist)//2
+#         lefthalf=alist[:mid]    #切片有左闭右开原则
+#         righthalf=alist[mid:]   #将列表分成左右两部分
+#         MergeSort(lefthalf)
+#         MergeSort(righthalf)   #递归调用
+# 快速排序：快速排序是一个递归的算法-----缩小规模：根据规模将数据表分为两半，最好情况是相等规模的两半；
+# 调用自身：将两半分别调用自身进行排序；基本结束条件：数据表中仅有1个数据项
+def quickSort(alist):
+    quickSortHelper(alist,0,len(alist)-1)
+def quickSortHelper(alist,first,last):
+    if first <last:
+        splitpoint=partition(alist,first,last)
+        quickSortHelper(alist,first,splitpoint-1)
+        quickSortHelper(alist,splitpoint+1,last)
+print(quickSort([29,45,8,14,78,99,23,56,12]))
+def partition(alist,first,last):
+    pivotvalue=alist[first]   #选定中值
+    leftmark=first+1    #左右标初值
+    rightmark=last
+    done=False
+    while not done:
+        while leftmark<rightmark and alist[leftmark]<=pivotvalue:
+            leftmark=leftmark+1   #向右移动左标
+        while leftmark<rightmark and alist[rightmark]>=pivotvalue:
+            rightmark=rightmark-1   #向左移动右标
+        if leftmark>rightmark:   #两标相错就结束移动    
+            done=true
+        else:
+            temp=alist[leftmark]
+            alist[leftmark]=alist[rightmark]
+            alist[rightmark]=temp            #左右标的值互换
+    temp=alist[first]
+    alist[first]=alist[rightmark]   #中值就位
+    alist[rightmark]=temp
+    return rightmark
+
+
+
+
 
 
 
