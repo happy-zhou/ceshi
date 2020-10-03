@@ -10,7 +10,7 @@ from pythonds.basic.deque import Deque
 #             b=nums.index(r)
 #             return [a,b]
 # print(search([1,2,3,4,7,9],17))
-
+# 官方解法
 # def twosum(nums,target):
 #     lens=len(nums)
 #     j=-1
@@ -39,7 +39,7 @@ from pythonds.basic.deque import Deque
 # print(reverse(-123))
 
 
-# #例子三：判断一个整数是否是回文数
+# #例子3：判断一个整数是否是回文数
 # 可采用双端队列,比较队首队尾出来的元素是否相等
 # 也可将整数逆序，比较逆序与未逆序的是否相等
 # def huiwenshu(nums):
@@ -57,40 +57,7 @@ from pythonds.basic.deque import Deque
 # print(huiwenshu(-123))
 
 
-# 例子4：非空字符串全部由大写字母组成，求出每个字母在这个字符串中出现的次数
-# def tongji(str):
-#     lens=len(str)
-#     str1='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-#     num=0
-#     for i in range(len(str)-1):
-#         for j in range(0,len(str1)):
-#             if str[i]==str1[j]:
-#                 num=num+1
-#         return str[i]=num
-# print(tongji('AFVBHYIO'))
-
-#例子5：任意给定一个字符串，58神奇串要求字符的取值范围是[5,8]，找出最长的58神奇串
-# def shenqi(str1):
-#     lens=len(str1)
-#     res=''
-#     for i in range(lens-1):
-#         if str1[i]==5 or str1[i]==8:
-#             res=str1[i]
-#             if str1[i+1]==5 or str1[i+1]==8:
-#                 res=res+str1[i+1]
-#             else:
-#                 return res
-# print(shenqi('13584853'))
-
-
-
-# #例子6：一叠钞票，面值包含1，5，10，20，50，100，每次可以从顶部或底部抽出一张钞票，最多可抽五次，求抽出的最大金额和
-# def maxValue(list1):
-#     lens=len(list1)
-#     sum=0
-#     for i in range(5):
-
-# 例子7：20题----有效的括号：给定一个只包括大中小括号的字符串，判断该字符串是否有效，要求：左括号必须以相同类型的右括号闭合，左右括号必须以正确的顺序闭合
+# 例子4：20题----有效的括号：给定一个只包括大中小括号的字符串，判断该字符串是否有效，要求：左括号必须以相同类型的右括号闭合，左右括号必须以正确的顺序闭合
 # 括号匹配可以联想到键值对-字典
 # def kuohao(s: str):
 #         match_dic = {')':'(', ']':'[', '}':'{'}
@@ -136,7 +103,7 @@ from pythonds.basic.deque import Deque
 #             return False
 # print(kuohao('()[]{'))
 
-# 例子7：53.最大子序和-----给定一个整数数组，找到一个具有最大和的连续子数组（子数组最少包含一个元素)，返回最大和
+# 例子5：53.最大子序和-----给定一个整数数组，找到一个具有最大和的连续子数组（子数组最少包含一个元素)，返回最大和
 # def maxSubSum(nums):
 #     lens=len(nums)
 #     tem=nums[0]     #当前和
@@ -153,7 +120,7 @@ from pythonds.basic.deque import Deque
 #     return maxsum
 # print(maxSubSum([-1,3,8,-5,9,-4,9]))
 
-# 例子8：70.爬楼梯：每次可以爬1或两个台阶，需要n阶才能到达楼顶，问有多少种方法可以到达楼顶
+# 例子6：70.爬楼梯：每次可以爬1或两个台阶，需要n阶才能到达楼顶，问有多少种方法可以到达楼顶
 # def climbStairs(n):
 #     #爬到n楼f(n)为n-1楼和n-2楼方法数之和，原因：第一次只跳一级，剩下的n-1级共有f(n-1)种方法；第一次跳两级，剩下的n-2级共有f(n-2)种方法
 #     fir=1
@@ -166,7 +133,7 @@ from pythonds.basic.deque import Deque
 #     return max(res,n)     #此种方式包括了n为1和2的情况
 # print(climbStairs(5))
 
-# 例子9：21.合并两个有序链表：将两个升序链表合并为一个新的升序链表返回(不太懂)
+# 例子7：21.合并两个有序链表：将两个升序链表合并为一个新的升序链表返回(不太懂)
 # def merTwoLists(l1,l2):
 #     if not l1: return l2  # 终止条件，直到两个链表都空
 #         if not l2: return l1
@@ -176,14 +143,8 @@ from pythonds.basic.deque import Deque
 #         else:
 #             l2.next = self.mergeTwoLists(l1,l2.next)
 #             return l2
-    
-
-# 例子9：判断一个二叉树是否为对称二叉树
-# #对称二叉树的性质：左子树的前序遍历和右子树的后续遍历是互为逆序的关系
-
 
 # 例子10：买卖股票的最佳时机：给定一个数组，第i个元素是该股票第i天的价格，买入和卖出只能一次，求所能获取的最大利润
-
 # def maxProfit(self, prices: List[int]) -> int:
 #     lens=len(prices)
 #     maxval=0
@@ -206,20 +167,3 @@ from pythonds.basic.deque import Deque
 #     return dp[-1]
 # print(maxProfit([2,4,7,1,9,4]))
 
-# 例子11：非递归阶乘：输入n,不采用递归的方法输出其阶乘
-# def jiecheng(num:int):
-#     multi=1
-#     while num >=1:
-#         multi=multi*num
-#         num=num-1
-#     return multi
-# print(jiecheng(4))
-
-
-
-
-
-    
-
-
-        
